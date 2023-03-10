@@ -1,0 +1,38 @@
+.canvas {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 240px;
+  height: 444px;
+  margin-top: 30px;
+  border: 2px dashed #c4c4c4;
+  border-radius: 6px;
+}
+
+.canvasPicture {
+  width: 20px;
+  height: 20px;
+}
+
+.blueText {
+  margin: 12px 0 4px 0;
+  color: #5d5fef;
+}
+
+.greyText {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  width: 100px;
+  color: #6b7280;
+}
+
+.visibleBorder {
+  width: 240px;
+  background-color: #5d5fef;
+  border: 1px solid #5d5fef;
+}

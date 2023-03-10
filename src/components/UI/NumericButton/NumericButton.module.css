@@ -1,0 +1,50 @@
+.button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 4px;
+  gap: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.white {
+  height: 48px;
+  background: #ffffff;
+  color: #000000;
+  border: 1px solid #e2e3e5;
+}
+
+.white:hover {
+  border: 2px solid #5d5fef;
+}
+
+.white:active {
+  color: #ffffff;
+  background: #5d5fef;
+}
+
+.blue {
+  height: 64px;
+  background: #5d5fef;
+  color: #ffffff;
+  border: none;
+}
+
+.smallWidth {
+  width: 52px;
+}
+
+.standartWidth {
+  width: 72px;
+}
+
+.bigWidth {
+  width: 152px;
+}
+
+.allWidth {
+  width: 232px;
+}
