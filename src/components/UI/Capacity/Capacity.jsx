@@ -10,13 +10,13 @@ export function Capacity(props) {
   const [guidance, setGuidance] = useState(false);
 
   const inCanvas = props.inCanvas;
-  const thisInput = props.thisInput;
+  //const thisInput = props.thisInput;
 
   let count = 0;
   let timer;
 
   const checkDraggable = () => {
-    if (thisInput) return false;
+    //if (thisInput) return false;
     if (inCanvas && activeBlock === "Constructor") {
       return true;
     } else if (activeBlock === "Constructor" && !banAdding) {

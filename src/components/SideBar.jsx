@@ -5,6 +5,10 @@ import { NumericButton } from "./UI/NumericButton/NumericButton";
 import style from "../styles/SideBar.module.css";
 
 const OPERATORS = ["/", "x", "-", "+"];
+const myBlock1 = "myBlock 1";
+const myBlock2 = "myBlock 2";
+const myBlock3 = "myBlock 3";
+const myBlock4 = "myBlock 4";
 
 export function SideBar() {
   const activeBlock = useSelector((state) => state.option.option);
@@ -20,38 +24,38 @@ export function SideBar() {
       {activeBlock === "Constructor" && (
         <>
           <Capacity
-            name="myBlock 1"
+            name={myBlock1}
             inCanvas={false}
             content={
-              <div className="myBlock 1">
-                <EntryField name="myBlock 1" value="0"></EntryField>
+              <div className={myBlock1}>
+                <EntryField name={myBlock1} value="0"></EntryField>
               </div>
             }
           ></Capacity>
           <Capacity
-            name="myBlock 2"
+            name={myBlock2}
             inCanvas={false}
             content={
-              <div style={{ display: "flex" }} className="myBlock 2">
+              <div style={{ display: "flex" }} className={myBlock2}>
                 {makeButtons(OPERATORS, "smallWidth")}
               </div>
             }
           ></Capacity>
           <Capacity
-            name="myBlock 3"
+            name={myBlock3}
             inCanvas={false}
             content={
-              <div className="myBlock 3">
-                <div style={{ display: "flex" }} className="myBlock 3">
+              <div className={myBlock3}>
+                <div style={{ display: "flex" }} className={myBlock3}>
                   {makeButtons([1, 2, 3])}
                 </div>
-                <div style={{ display: "flex" }} className="myBlock 3">
+                <div style={{ display: "flex" }} className={myBlock3}>
                   {makeButtons([3, 5, 6])}
                 </div>
-                <div style={{ display: "flex" }} className="myBlock 3">
+                <div style={{ display: "flex" }} className={myBlock3}>
                   {makeButtons([7, 8, 9])}
                 </div>
-                <div style={{ display: "flex" }} className="myBlock 3">
+                <div style={{ display: "flex" }} className={myBlock3}>
                   <NumericButton value="0" width="bigWidth" />
                   <NumericButton value="," />
                 </div>
@@ -59,10 +63,10 @@ export function SideBar() {
             }
           ></Capacity>
           <Capacity
-            name="myBlock 4"
+            name={myBlock4}
             inCanvas={false}
             content={
-              <div style={{ display: "flex" }} className="myBlock 4">
+              <div style={{ display: "flex" }} className={myBlock4}>
                 <NumericButton value="=" width="allWidth" color="blue" />
               </div>
             }

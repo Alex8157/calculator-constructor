@@ -22,7 +22,7 @@ export const canvasReduser = (state = defaultState, action) => {
 
       if (state.positions.includes(numberFromBuffer)) {
         if (numberFromBuffer === numberFromCanvas) return state;
-        if (numberFromBuffer === "1") return state;
+        //if (numberFromBuffer === "1") return state;
         let newCanvas = [...state.canvas];
         let newPositions = [...state.positions];
         const indexFromBuffer = newPositions.indexOf(numberFromBuffer);
@@ -103,43 +103,3 @@ export const canvasReduser = (state = defaultState, action) => {
       return state;
   }
 };
-/*
-
-            if (indexFromCanvas - indexFromBuffer === 1) {
-              console.log(1);
-              [newCanvas[indexFromBuffer], newCanvas[indexFromCanvas]] = [
-                newCanvas[indexFromCanvas],
-                newCanvas[indexFromBuffer],
-              ];
-              [newPositions[indexFromBuffer], newPositions[indexFromCanvas]] = [
-                newPositions[indexFromCanvas],
-                newPositions[indexFromBuffer],
-              ];
-            }
-            if (indexFromCanvas - indexFromBuffer === 2) {
-              if (indexFromBuffer === 0) {
-                let middleCanvas = newCanvas.splice(0, 1);
-                let middlePositions = newPositions.splice(0, 1);
-                let tailCanvas = newCanvas.splice(3, 1);
-                let tailPositions = newPositions.splice(3, 1);
-                newCanvas = [...newCanvas, ...middleCanvas, ...tailCanvas];
-                newPositions = [
-                  ...newPositions,
-                  ...middlePositions,
-                  ...tailPositions,
-                ];
-              } else {
-                let tailCanvas = newCanvas.splice(indexFromBuffer, 1);
-                let tailPositions = newPositions.splice(indexFromBuffer, 1);
-                newCanvas = [...newCanvas, ...tailCanvas];
-                newPositions = [...newPositions, ...tailPositions];
-              }
-            }
-            if (indexFromCanvas - indexFromBuffer === 3) {
-              let tailCanvas = newCanvas.splice(0, 1);
-              let tailPositions = newPositions.splice(0, 1);
-              newCanvas = [...newCanvas, ...tailCanvas];
-              newPositions = [...newPositions, ...tailPositions];
-            }
-          }
-*/

@@ -21,15 +21,23 @@ export function NumericButton(props) {
   const calculateWidth = () => {
     return props.width ? style[props.width] : style.standartWidth;
   };
+
   const calculateColor = () => {
     return props.color ? style[props.color] : style.white;
   };
+
+  const checkHover = () => {
+    if (activeBlock === "Runtime" && !props.color) {
+      return style.hoverActive;
+    } else return "";
+  };
+
   return (
     <button
       onClick={add}
       className={`${
         style.button
-      } ${calculateWidth()} ${calculateColor()} fontInter`}
+      } ${calculateWidth()} ${calculateColor()} ${checkHover()} fontInter`}
     >
       {props.value}
     </button>

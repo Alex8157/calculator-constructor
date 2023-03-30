@@ -52,7 +52,6 @@ export function Canvas() {
         border: canvas.length ? "none" : "2px dashed #c4c4c4",
       }}
       onDragOver={(e) => dragOverHandler(e)}
-      //onDragEnter={(e) => dragOverHandler(e)}
       onDragEnd={(e) => dragEndHandler(e)}
       onDragLeave={(e) => dragLeaveHandler(e)}
       onDrop={(e) => dropHandler(e)}
@@ -66,7 +65,7 @@ export function Canvas() {
               key={unit.props.className}
               content={unit}
               name={unit.props.className}
-              thisInput={unit.props.className === "myBlock 1" ? true : false}
+              //thisInput={unit.props.className === "myBlock 1" ? true : false}
             />
           );
         })
@@ -74,7 +73,7 @@ export function Canvas() {
         <>
           <img
             className={style.canvasPicture}
-            src={process.env.PUBLIC_URL + "/picture.png"}
+            src="https://cdn-icons-png.flaticon.com/512/7010/7010066.png"
             alt="addPicture"
           />
           <span className={`${style.blueText} fontInter`}>Перетащите сюда</span>
